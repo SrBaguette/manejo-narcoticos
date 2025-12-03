@@ -34,6 +34,12 @@ class AdminDatos:
         conteo = df ['sustancia'].value_counts()
         sustancia_top = conteo.idxmin()
         dosis_sustancia = df [df['sustancia'] == sustancia_top]['dosis_g'].min()
+        print("Sustancia con menor incautacion: ")
+        print(f"Sustancia: {sustancia_top}")
+        print(f"Dosis: {dosis_sustancia}")
+
+        return sustancia_top, dosis_sustancia
+
 
     def Estadisticas(df):
         Maxima_dosis = df["dosis_g"].max()
@@ -53,7 +59,7 @@ class AdminDatos:
         print("El primer Quartil de droga incautada es :",Quartil_1)
         print("El segundo Quartil de droga incautada es :",Quartil_2)
         print("El tercer Quartil de droga incautada es :",Quartil_3)
-        
+
     @staticmethod
     def buscarpordane(df,codigo):
         resultados = df[df["codigo_dane"] == codigo]
@@ -61,12 +67,7 @@ class AdminDatos:
             print("No se encontró ningún registro con ese código.")
         else:
             print(resultados)
-        print("Sustancia con menor incautacion: ")
-        print(f"Sustancia: {sustancia_top}")
-        print(f"Dosis: {dosis_sustancia}")
-
-        return sustancia_top, dosis_sustancia
-
+        
     @staticmethod
     def mayor_sustancia(df):
         conteo = df ['sustancia'].value_counts()
