@@ -24,3 +24,10 @@ class AdminDatos:
         print("El primer Quartil de droga incautada es :",Quartil_1)
         print("El segundo Quartil de droga incautada es :",Quartil_2)
         print("El tercer Quartil de droga incautada es :",Quartil_3)
+    @staticmethod
+    def buscarpordane(df,codigo):
+        resultados = df[df["codigo_dane"] == codigo]
+        if resultados.empty:
+            print("No se encontró ningún registro con ese código.")
+        else:
+            print(resultados)
