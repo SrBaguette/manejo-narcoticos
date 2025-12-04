@@ -10,6 +10,7 @@ while(opci!="0"):
     print("4. Incautación por departamento.")
     print("5. Incautación por municipio.")
     print("6. Sustancias mas y menos incautadas.")
+    print("7. Graficas")
     print("0. Salir")
     opci=input("Ingrese una opción del menú: ")
     if opci=="1":
@@ -28,6 +29,20 @@ while(opci!="0"):
     if opci=="6":
         AdminDatos.mayor_sustancia(df)
         AdminDatos.menor_sustancia(df)
+    if opci=="7":
+        print("Bienvenido al submenú de graficas")
+        print("1. Incautaciones por dias")
+        print("2. Municipios con mayores y menores incautaciones")
+        print("3. Departamentos con mayores y menores incautaciones")
+        opci2=input("Ingrese una opción del submenú: ")
+        if opci2=="1":
+            Graficas.pormesgra(df)
+        if opci2=="2":
+            Graficas.GraficaMunicipios_Mayor(df)
+            Graficas.GraficaMunicipios_Menor(df)
+        if opci2=="3":
+            Graficas.Grafica_Departamento_Mayor(df)
+            Graficas.Grafica_Departamento_Menor(df)
     if opci=="0":
         print("Adios.")
         break
