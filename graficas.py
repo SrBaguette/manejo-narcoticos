@@ -1,6 +1,7 @@
 from admindatos import AdminDatos
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
+
 class Graficas:
     @staticmethod
     def pormesgra(df):
@@ -13,6 +14,16 @@ class Graficas:
         plt.title('Incautaciones por dias')
         plt.tight_layout()
         plt.show()
+        
+    @staticmethod
+    def Grafica_quartiles(df):
+        plt.figure(figsize=(10, 7))
+        plt.boxplot(df["dosis_g"])
+        plt.yscale("log") 
+        plt.title("Caja y Bigotes (Escala Logarítmica)")
+        plt.ylabel("dosis_g (log)")
+        plt.show()
+
 
     @staticmethod
     def Grafica_Departamento_Mayor(df):
@@ -49,5 +60,7 @@ class Graficas:
         plt.ylabel('Dosis_g')
         plt.tight_layout()
         plt.show()
-    
-    
+        
+        
+        
+        
