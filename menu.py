@@ -13,9 +13,16 @@ while(opci!="0"):
     opci=input("Ingrese una opción del menú: ")
     if opci=="1":
         print(df)
+    if opci=="2":
+        AdminDatos.Estadisticas(df)
     if opci=="3":
         codigo=int(input("Ingrese el codigo del DANE que desea buscar: "))
         AdminDatos.buscarpordane(df,codigo)
+    if opci=="4":
+        pass
+    if opci=="5":
+        AdminDatos.mayor_municipio(df)
+        AdminDatos.menor_municipio(df)
     if opci=="0":
         print("Adios.")
         break
