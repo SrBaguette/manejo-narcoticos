@@ -19,7 +19,8 @@ while(opci!="0"):
         codigo=int(input("Ingrese el codigo del DANE que desea buscar: "))
         AdminDatos.buscarpordane(df,codigo)
     if opci=="4":
-        pass
+        AdminDatos.mayor_departamento(df)
+        AdminDatos.menor_departamento(df)
     if opci=="5":
         AdminDatos.mayor_municipio(df)
         AdminDatos.menor_municipio(df)
