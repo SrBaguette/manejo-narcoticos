@@ -38,9 +38,11 @@ while(opci!="0"):
         if opci2=="1":
             Graficas.pormesgra(df)
         if opci2=="2":
-            pass
+            Graficas.GraficaMunicipios_Mayor(df)
+            Graficas.GraficaMunicipios_Menor(df)
         if opci2=="3":
-            pass
+            Graficas.Grafica_Departamento_Mayor(df)
+            Graficas.Grafica_Departamento_Menor(df)
     if opci=="0":
         print("Adios.")
         break
