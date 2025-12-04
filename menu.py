@@ -9,6 +9,7 @@ while(opci!="0"):
     print("3. Buscar por codigo del DANE.")
     print("4. Incautación por departamento.")
     print("5. Incautación por municipio.")
+    print("6. Sustancias mas y menos incautadas.")
     print("0. Salir")
     opci=input("Ingrese una opción del menú: ")
     if opci=="1":
@@ -24,6 +25,9 @@ while(opci!="0"):
     if opci=="5":
         AdminDatos.mayor_municipio(df)
         AdminDatos.menor_municipio(df)
+    if opci=="6":
+        AdminDatos.mayor_sustancia(df)
+        AdminDatos.menor_sustancia(df)
     if opci=="0":
         print("Adios.")
         break
