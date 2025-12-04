@@ -1,5 +1,5 @@
 from admindatos import AdminDatos
-
+from graficas import Graficas
 df=AdminDatos.leer_csv("encautaciones_de_drogas.csv")
 opci=-1
 while(opci!="0"):
