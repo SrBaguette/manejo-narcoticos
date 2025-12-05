@@ -83,7 +83,26 @@ class AdminDatos:
         print("El segundo Quartil de droga incautada es :",Quartil_2)
         print("El tercer Quartil de droga incautada es :",Quartil_3)
 
-    @staticmethod
+    def EstadisticasGUI(df):
+        Maxima_dosis = df["dosis_g"].max()
+        Minima_dosis = df["dosis_g"].min()
+        Promedio_dosis = df["dosis_g"].mean()
+        Desviacion_estandar = df["dosis_g"].std()
+        Conteo_de_dosis = df["dosis_g"].count()
+        Quartil_1 = df["dosis_g"].quantile(0.25)
+        Quartil_2 = df["dosis_g"].quantile(0.50)
+        Quartil_3 = df["dosis_g"].quantile(0.75)
+        texto = (
+            f"La máxima incautación es: {Maxima_dosis}\n"
+            f"La mínima incautación es: {Minima_dosis}\n"
+            f"El promedio es: {Promedio_dosis}\n"
+            f"La desviación estándar es: {Desviacion_estandar}\n"
+            f"Total de registros: {Conteo_de_dosis}\n"
+            f"Quartil 1: {Quartil_1}\n"
+            f"Quartil 2: {Quartil_2}\n"
+            f"Quartil 3: {Quartil_3}"
+            )
+        return texto
     def buscarpordane(df,codigo):
         resultados = df[df["codigo_dane"] == codigo]
         if resultados.empty:
